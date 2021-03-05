@@ -87,6 +87,8 @@ def menu_interface():
                                 bandit_players = []
                                 player_heights = []
                                 guardians = []
+                                experienced_players = []
+                                non_experienced_players = [] 
                                 print (str("\nBandits Stats\n"))
                                 print ("------------------")
                                 print (roster_length)
@@ -94,11 +96,17 @@ def menu_interface():
                                         bandit_players.append(player["name"])
                                         player_heights.append(player["height"])
                                         guardians.append(player["guardians"])
+                                        if player in experience_yes:
+                                                experienced_players.append(player)
+                                        if player in experience_no:
+                                                non_experienced_players.append(player) 
                                 average_height = sum(player_heights) / len(teams_list[1])
                                 average_height = round(average_height) 
                                 print ("Roster: {}".format(bandit_players))
                                 print ("Average Player Height: {} inches".format(average_height))
                                 print ("Guardians: {}".format(guardians))
+                                print ("Experienced players: {}".format(len(experienced_players)))
+                                print ("Non-Experienced players: {}".format(len(non_experienced_players)))
                                 forward = input("\nPlease type enter 'Y' or 'N' to continue.\n")
                                 forward = forward.upper()
                                 if forward == "Y":
@@ -115,6 +123,8 @@ def menu_interface():
                                 warriors_players = []
                                 player_heights = []
                                 guardians = []
+                                experienced_players = []
+                                non_experienced_players = [] 
                                 print (str("\nWarriors Stats\n"))
                                 print ("------------------\n")
                                 print (roster_length)
@@ -122,11 +132,17 @@ def menu_interface():
                                         warriors_players.append(player["name"])
                                         player_heights.append(player["height"])
                                         guardians.append(player["guardians"])
+                                        if player in experience_yes:
+                                                experienced_players.append(player)
+                                        if player in experience_no:
+                                                non_experienced_players.append(player) 
                                 average_height = sum(player_heights) / len(teams_list[2])
                                 average_height = round(average_height)       
                                 print ("Roster: {}".format(warriors_players))  
                                 print ("Average Player Height: {} inches".format(average_height)) 
                                 print ("Guardians: {}".format(guardians))
+                                print ("Experienced players: {}".format(len(experienced_players)))
+                                print ("Non-Experienced players: {}".format(len(non_experienced_players)))
                                 forward = input("\nPlease type enter 'Y' or 'N' to continue.\n")
                                 forward = forward.upper()
                                 if forward == "Y":
