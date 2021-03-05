@@ -71,7 +71,7 @@ def menu_interface():
                                 print ("Guardians: {}".format(guardians))
                                 print ("Experienced players: {}".format(len(experienced_players)))
                                 print ("Non-Experienced players: {}".format(len(non_experienced_players)))
-                                forward = input("\nPlease type enter 'Y' or 'N' to continue.\n")
+                                forward = input("\nPlease type enter 'Y' to continue or 'N' to quit.\n")
                                 forward = forward.upper()
                                 if forward == "Y":
                                         continue
@@ -107,7 +107,7 @@ def menu_interface():
                                 print ("Guardians: {}".format(guardians))
                                 print ("Experienced players: {}".format(len(experienced_players)))
                                 print ("Non-Experienced players: {}".format(len(non_experienced_players)))
-                                forward = input("\nPlease type enter 'Y' or 'N' to continue.\n")
+                                forward = input("\nPlease type enter 'Y' to continue or 'N' to quit.\n")
                                 forward = forward.upper()
                                 if forward == "Y":
                                         continue
@@ -143,7 +143,7 @@ def menu_interface():
                                 print ("Guardians: {}".format(guardians))
                                 print ("Experienced players: {}".format(len(experienced_players)))
                                 print ("Non-Experienced players: {}".format(len(non_experienced_players)))
-                                forward = input("\nPlease type enter 'Y' or 'N' to continue.\n")
+                                forward = input("\nPlease type enter 'Y' to continue or 'N' to quit.\n")
                                 forward = forward.upper()
                                 if forward == "Y":
                                         continue
