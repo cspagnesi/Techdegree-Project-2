@@ -19,11 +19,8 @@ def clean_data():
                         experience_no.append(player)
                 height = player["height"].split()
                 player["height"] = int(height[0])
-                guardians = player["guardians"]
-                player_guardians.append(guardians)
-                #splits integer and word, 'inches'.
-                #allows me to call in array
-                        
+                player["guardians"] = player["guardians"].split('and')
+
 def balance_teams():
         teams_list[0] = (experience_no[0:3]) + (experience_yes[0:3])
         teams_list[1] = (experience_no[3:6]) + (experience_yes[3:6])
@@ -38,7 +35,6 @@ def menu_interface():
                 print ("B: Quit\n")
                 stats_or_quit = input("Please enter an option.\n")
                 stats_or_quit = stats_or_quit.upper()
-                
                 if stats_or_quit == "A":
                         print ("\nA: Panthers")
                         print ("B: Bandits")
@@ -65,7 +61,8 @@ def menu_interface():
                                         if player in experience_no:
                                                 non_experienced_players.append(player) 
                                 average_height = sum(player_heights) / len(teams_list[0])
-                                average_height = round(average_height)                
+                                panther_players = (", ".join(panther_players))
+                                average_height = round(average_height)   
                                 print ("Roster: {}.".format(panther_players))
                                 print ("Average Player Height: {} inches".format(average_height))
                                 print ("Guardians: {}".format(guardians))
@@ -137,7 +134,7 @@ def menu_interface():
                                         if player in experience_no:
                                                 non_experienced_players.append(player) 
                                 average_height = sum(player_heights) / len(teams_list[2])
-                                average_height = round(average_height)       
+                                average_height = round(average_height)      
                                 print ("Roster: {}".format(warriors_players))  
                                 print ("Average Player Height: {} inches".format(average_height)) 
                                 print ("Guardians: {}".format(guardians))
